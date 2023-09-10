@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Sun, Moon } from '../../Utils/Svg';
 function Navbar () {
 
@@ -14,7 +14,6 @@ function Navbar () {
     const newDarkMode = !isDarkMode;
     setIsDarkMode(newDarkMode);
     localStorage.setItem('darkMode', newDarkMode.toString());
-    //add data-attribut html
     document.documentElement.setAttribute('data-theme', newDarkMode ? 'dark' : 'light');
   }
 

@@ -46,7 +46,8 @@ function Card ({ pokemon, Captured }) {
   }
 
   const dubleClick = number => {
-    fetch('/api/pokemon/capture', {
+    setLoading(true)
+    fetch('api/pokemon/capture', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -58,6 +59,11 @@ function Card ({ pokemon, Captured }) {
       .then(response => response.json())
       .then(data => {
         setIsCaptured(true)
+      }).finally(() => {
+        // Wait 1.1 seconds to show the pokeball animation
+        setTimeout(() => {
+          setLoading(false)
+        }, 1100)
       })
   }
 
@@ -84,14 +90,19 @@ function Card ({ pokemon, Captured }) {
         className='card card-compact  bg-white border border-base-300 shadow-lg text-black'
         key={pokemon.name}
       >
-        
         <figure className='h-[310px] bg-white'>
           {isCaptured && (
             <div className='absolute top-0 right-0'>
               <img src='images/logo.png' className='w-15 h-15' alt='logo' />
             </div>
           )}
-
+          {loading && (
+            <img
+              src={'images/fire.gif'}
+              className='w-15 h-15 absolute'
+              alt='logo'
+            />
+          )}
           <img
             src={`https://img.pokemondb.net/artwork/large/${pokemonName}.jpg`}
             onError={e => {
@@ -100,6 +111,7 @@ function Card ({ pokemon, Captured }) {
             }}
             loading='lazy'
             onDoubleClick={() => dubleClick(pokemon.number)}
+            className='cursor-pointer'
             alt={pokemonName}
           />
         </figure>
