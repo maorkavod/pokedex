@@ -42,6 +42,7 @@ Make sure you have docker installed and running on your machine.
 With docker, you can run the application in a container without installing any dependencies on your machine.
 
 ```bash
+# Make sure you are in the root directory of the project
 docker build -t pokedex . # This will take a minute or two, The docker is building the images and installing the dependencies.
 docker run -p 8080:8080 -p 3000:3000 pokedex
 ```
