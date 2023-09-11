@@ -61,7 +61,9 @@ class PokemonsCache:
     
     def sort_pokemos(self, sort_by, sort_order, pokemons):
         if sort_by and sort_order:
-
-            #handle by types here
-            pokemons = sorted(pokemons, key=lambda pokemon: pokemon[sort_by], reverse=sort_order.lower() == 'desc')
+            if sort_by == 'type':
+                pokemons = sorted(pokemons, key=lambda pokemon: pokemon['type_one'], reverse=sort_order.lower() == 'desc')
+                pokemons = sorted(pokemons, key=lambda pokemon: pokemon['type_two'], reverse=sort_order.lower() == 'desc')
+            else:
+                pokemons = sorted(pokemons, key=lambda pokemon: pokemon[sort_by], reverse=sort_order.lower() == 'desc')
         return pokemons
