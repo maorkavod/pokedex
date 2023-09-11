@@ -72,4 +72,4 @@ npm start
 
 ## Preview
 
-![pokedex](https://maor-static-exp-100-days.s3.eu-central-1.amazonaws.com/pokedex-preview.gif)
+![Alt Text](https://maor-static-exp-100-days.s3.eu-central-1.amazonaws.com/pokedex-preview.gif)
