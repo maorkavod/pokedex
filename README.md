@@ -39,13 +39,14 @@ cd pokedex
 ## Docker instructions (recommended):
 
 Make sure you have docker installed and running on your machine.
+With docker, you can run the application in a container without installing any dependencies on your machine.
 
 ```bash
 docker build -t pokedex . # This will take a minute or two, The docker is building the images and installing the dependencies.
 docker run -p 8080:8080 -p 3000:3000 pokedex
 ```
 
-### At this point, the application is running on your machine. You can access it at http://localhost:3000. The backend and frontend are running in the same container.
+### At this point, the application is running within a Docker container on your machine. You can access it at http://localhost:3000.
 
 ## Local instructions:
 
@@ -67,7 +68,7 @@ npm install
 npm start
 ```
 
-### At this point, the application is running on your machine. You can access it at http://localhost:3000. The backend and frontend are running in different processes.
+### At this point, the application is running on your machine. You can access it at http://localhost:3000.
 
 
 ## Preview
