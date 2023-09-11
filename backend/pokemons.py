@@ -1,4 +1,3 @@
-# import pokemons_cache.py as cache
 from pokemons_cache import PokemonsCache
 from flask import session
 
