@@ -68,3 +68,8 @@ npm start
 ```
 
 ### At this point, the application is running on your machine. You can access it at http://localhost:3000. The backend and frontend are running in different processes.
+
+
+## Preview
+
+![pokedex](https://maor-static-exp-100-days.s3.eu-central-1.amazonaws.com/pokedex-preview.gif)
