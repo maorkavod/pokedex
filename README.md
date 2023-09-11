@@ -18,6 +18,7 @@ Clone this repository to your local machine:
 
 ```bash
 git clone git@github.com:maorkavod/pokedex.git -b main
+cd pokedex
 ```
 
 ### project structure
@@ -40,7 +41,6 @@ git clone git@github.com:maorkavod/pokedex.git -b main
 Make sure you have docker installed and running on your machine.
 
 ```bash
-cd pokedex
 docker build -t pokedex . # This will take a minute or two, The docker is building the images and installing the dependencies.
 docker run -p 8080:8080 -p 3000:3000 pokedex
 ```
