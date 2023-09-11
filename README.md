@@ -71,6 +71,8 @@ npm start
 
 
 ## Preview
+## Click here -> [Pokedex video preview](https://maor-static-exp-100-days.s3.eu-central-1.amazonaws.com/pokedex-preview.gif)  to see a video preview of the application.
 
-<img src="https://maor-static-exp-100-days.s3.eu-central-1.amazonaws.com/pokedex-preview.gif"/>
+<img src="https://maor-static-exp-100-days.s3.eu-central-1.amazonaws.com/preview.png"/>
+
 
